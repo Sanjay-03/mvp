@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+
+  #logo
+   {
+       width: 50px;
+   }
+   li a
+   {
+       color: red;
+       font-size: 20px;
+       font-family: Georgia, 'Times New Roman', Times, serif;
+   }
+  #clr
+  {
+      color: red;
+  }
+  #front
+  {
+      width: 90%;
+  }
+.new
+{
+    border: 1px solid black;
+}
+b{
+    font-size: 25px;
+}
+#con
+{
+    font-family: 'STIX Two Math', serif;
+}
+p{
+    font-size: 20px;
+}
+.form-control:focus
+{
+    
+    border-color: red;
+    box-shadow: none;
+    
+}
+label{
+    font-size: 20px;
+}
+footer{
+    background-color: skyblue;
+    }
+    #icon
+    {
+        padding: 2%;
+        text-align: center;
+    }
+    #sec
+    {
+        margin-top: 8%;
+    }
+    
+    #h:hover
+   {
+    color: skyblue;
+    }
+
+@media (max-width: 500px)
+{
+    iframe
+    {
+        width: 300px;
+        height: 200px;
+    }
+#icon
+{
+    padding: 6%;
+}
+
+#sec
+    {
+        margin-top: 230%;
+    }
+    
+}
