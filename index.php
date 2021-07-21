@@ -1,0 +1,186 @@
+<?php
+ $con = mysqli_connect('localhost', 'root', '', 'mvp');
+ $name = $_POST['name'];
+ $email = $_POST['email'];
+ $number = $_POST['number'];
+ $country = $_POST['country'];
+ $message = $_POST['message'];
+
+ $sql = "INSERT INTO `data` (`id` , `name` , `email`, `number`, `country`, `message`) VALUES('0', '$name', '$email', '$number', '$country', '$message')";
+  $rs = mysqli_query($con, $sql);
+  if($rs)
+  {
+    echo "records inserted";
+  }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<h>>, initial-scale=1.0">
+    <title>Tasty Tasty</title>
+    <link rel="shortcut icon" href="TT_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8936e4ca13.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="myscript.js"></script>
+</head>
+
+<body>
+    
+    <section id="Home">
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark fixed-top" >
+        <a class="navbar-brand" href="#"><img id="logo" src="TT_logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto" >
+            <li class="nav-item">
+              <a class="nav-link active" id="h" href="#Home" >Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="h" href="#About">About</a>
+            </li>
+            <li>
+              <a class="nav-link active" id="h" href="#Video">Video</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="h" href="#contact">Contact</a>
+            <li class="nav-item">
+            </li>
+            </ul>
+        </div>
+      </nav>      
+      <div class="container">
+          <div class="row flex-lg-row d-flex flex-column-reverse" id="sec">
+              <div class="col-lg-6 ">
+                <center><img id="front" src="blend2.jpg"></img></center>
+              </div>
+            
+        <div class="col-lg-6  " id="hero">
+            <h1 class="text-center">TT Sambar Powder</h1><br>
+            <p>Mahesh value products private limited owns the brand TT. we believe in our vision of providing 'tasty' and 'healthy' food products.</p>
+            <li>TT Madurai sambar powder Masalas its the one of our product</li>
+            <li>Our state-of-art plant have been certified under ISO 9001:2015 and FSSAI license number : 10015042001929. We adhere to stringent standards of hygiene and robust quality control procedures at various stages of processing. This is done to ensure that only the best quality products leave our factory. Our plant has an in-house laboratory facility equipped with the latest equipments, to ensure that the quality of the products remains up to our high standards. </li>
+            <li>Trusted Taste and Quality products for 125 years</li>
+        </div>
+        </div>
+        </section>
+        
+    <hr class="new" size="10">
+    <section id="About">
+    <br>
+    <div class="container">
+        <div class="row ">
+            <div class="col">
+                <div id="con">
+          <h2 class="text-center">Trusted Taste and Quality products for 125 years</h2><br>
+            <p>
+                Mahesh Value Products Private limited owns the brand TT. We believe in our vision of providing ‘Tasty’ and ‘Healthy’ food products. We have state of the art manufacturing facilities – in Manalur, Sivagangai District, Tamilnadu.
+                
+                Our state-of-art plant have been certified under ISO 9001:2015 and FSSAI license number : 10015042001929. We adhere to stringent standards of hygiene and robust quality control procedures at various stages of processing.</p>
+               <p> This is done to ensure that only the best quality products leave our factory. Our plant has an in-house laboratory facility equipped with the latest equipments, to ensure that the quality of the products remains up to our high standards.
+                TT product range consists of Asafoetida, Appalam, Pure Spices and Blend.</p>
+              <p>  We ensure that only the best ingredients and high standards of manufacturing are used for making our products and we are proud of consistently delivering the authentic taste of tradition with utmost quality.
+            </p>
+                </div>
+            <div class="text-center">
+            <b >Buy this product use the below link.</b><br><br>
+            <a class="btn btn-info btn-lg role=button" target="blank" href="https://www.amazon.in/TT-Sambar-Powder-Tamil-Style/dp/B08M38HL15"><i class="fab fa-amazon"></i>Purchase</a>
+            </div>
+        </div>
+    </div>
+
+        <br>
+        <div id="list">
+            <ul style="font-family: 'PT Sans', sans-serif; font-size: 20px;">
+            <li>The mission of the Company is to ‘improve daily health’ of our consumers by offering ‘healthy food’ products . To achieve this mission, resources are being allocated for increasing manufacturing capacity, brand building and supply chain management.</li>
+            <li>As a leading Quality Manufacturer, Our Vision is to offer ‘Tasty’ and ‘Healthy’ Food Products to our customers who have placed their trust on the brand for the last 125 years. We are committed to grow with integrity.</li>
+            </ul>
+        </div>
+    </div>
+        </section>
+        <br>
+        <hr class="new" size="10">
+        <div id="Video">
+        <div class="text-center">
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/2A3Fwin_tF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </div>
+        <hr class="new" size="10">
+        <div id="contact">
+        
+            <h1 class="text-center">Contact us</h1>
+            <div class="container col-md-6 mb-4">
+              
+            <form class="form-control" method="post" action="">
+              
+              <label>Name</label>
+              <input  id="from" type="text" name="name" class="form-control mb-2" required >
+              <label>E-mail</label>
+              <input  id="from" type="email" name="email" class="form-control mb-2" required >        
+              <label >Phone</label>
+              <input id="num" type="number" name="number" class="form-control mb-2" required>
+              <label>Country</label>
+              <select class="form-control mb-2" id="opt" name="country" required>
+                <option>INDIA</option>
+                <option>USA</option>
+                <option>Afghanistan</option>
+                <option>Angola</option>
+              </select>
+            
+            
+            
+              <label >Message</label>
+              <textarea class="form-control mb-3" rows="3" id="msg" name="message" required></textarea>
+              <button class="btn btn-danger form-control" >submit</button>            
+            </form>
+          <br>
+          
+
+
+        </div>
+      </div>       
+<footer class="page-footer" id="icon">
+      
+  
+  <a >
+    <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+  </a>
+  
+  <a class="tw-ic">
+    <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+  </a>
+  
+  <a class="gplus-ic">
+    <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+  </a>
+ 
+ 
+  <a class="ins-ic">
+    <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+  </a>
+
+  <div class="footer-copyright text-center text-danger py-3">© 2021 Copyright:
+    <a class="text-danger" href="http://maheshvalue.com/"> Mahesh Value</a>
+  </div>
+ 
+
+</footer>
+
+
+    
+    
+    
+      
+      
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
