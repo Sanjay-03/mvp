@@ -1,30 +1,36 @@
-function savedata()
-{
-    
-    if(window.XMLHttpRequest)
+$(document).ready(function()
     {
-        a = new XMLHttpRequest();    
-    }
-    else
-    {
-        a = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    a.onreadystatechange = function(){
-        if(a.readyState==4 && a.status==200){
-           alert(a.responseText);
-        }
-    }
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var number = document.getElementById("number").value;
-    var country = document.getElementById("country").value;
-    var message = document.getElementById("message").value;
-    var val = "name="+name+"&email="+email+"&number="+number+"&country="+country+"&message="+message;
-    console.log(val.length)
-    var url = "db.php";
-    a.open("POST",url,true);
-    a.setRequestHeader("content-type","application/x-www-form-urlencoded");
-    a.setRequestHeader("content-length" ,val.length);
-    a.setRequestHeader("connecion","close");
-    a.send(val);
-}
+        $("#submit").click(function()
+        {
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var number = $("#number").val();
+            var country = $("#country").val();
+            var message = $("#message").val();
+            if(name==''||email==''||number==''||country==''||message=='')
+            {
+                alert('please fill');
+                return false;
+            }
+            $.ajax({
+                type: "POST",
+                url: "db.php",
+                data:
+                {
+                    name: name,
+                    email: email,
+                    number: number,
+                    country: country,
+                    message: message
+                },
+                cache: false,
+                success: function(data){
+                    alert(data);
+                },
+                error: function(xhr, status, error){
+                    console.error(xhr);
+                }
+            });
+            
+        });
+    });
