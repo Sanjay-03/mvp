@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,6 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/8936e4ca13.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -100,26 +100,27 @@
         <div id="contact">
         
             <h1 class="text-center">Contact us</h1>
-            <div class="container col-md-6 mb-4">
+            <div class="container col-md-5 mb-4">
               
-            <form method="POST" class="form-control">
+            <form  class="form-control" name="form">
               
               <label>Name</label>
-              <input  id="name" type="text" name="name" class="form-control mb-2" required >
+              <input  id="name" type="text" name="name" class="form-control mb-2" / >
               <label>E-mail</label>
-              <input  id="email" type="email" name="email" class="form-control mb-2" required >        
+              <input  id="email" type="email" name="email" class="form-control mb-2" / >        
               <label >Phone</label>
-              <input id="number" type="number" name="number" class="form-control mb-2" required>
+              <input id="number" type="number" name="number" class="form-control mb-2" / >
               <label>Country</label>
-              <select class="form-control mb-2" id="country" name="country" required>
+              <select class="form-control mb-2" id="country" name="country" / >
+                <option value="none">Select an option</option>
                 <option>INDIA</option>
                 <option>USA</option>
                 <option>Afghanistan</option>
                 <option>Angola</option>
               </select>        
               <label >Message</label>
-              <textarea class="form-control mb-3" rows="3" id="message" name="message" required></textarea>
-              <button  onclick="savedata()" type="button" class="btn btn-danger form-control mb-3">Submit</button>
+              <textarea class="form-control mb-3" rows="3" id="message" name="message" / ></textarea>
+              <input type="button" id="submit" class="btn btn-danger form-control mb-3" value="submit" / >
               <input  class="btn btn-success form-control" type="reset" value="clear">  
                
             </form>
@@ -164,8 +165,8 @@
       
 
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script src="script.js"></script>
 </html>
